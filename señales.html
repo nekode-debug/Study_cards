@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- Esta línea indica que el documento es un archivo HTML5 -->
+<html lang="es"> <!-- El atributo lang="es" indica que el idioma principal del contenido de la página es español -->
+<head>
+    <meta charset="UTF-8"> <!-- Esta línea establece la codificación de caracteres del documento a UTF-8, lo que permite el uso de caracteres especiales y acentos en español -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!--rel es relationship para decir que relación tiene ese archivo externo--> 
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Fredoka+One&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <title>Study Cards</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="imagenes/flechan.png" alt="Volver" class="flecha">
+        </a>
+        <h1>Study Cards</h1>
+    </header>
+    <div class="contenedor-titulo">
+        <img src="imagenes/patito_con_gafas.png" alt="Patito" class="patito-tema">
+        <div class="titulo">
+            <h2>Procesamiento de Señales</h2>
+        </div>
+        <img src="imagenes/patito_con_gafas.png" alt="Patito" class="patito-tema">
+    </div>
+    <div class="contenedor-principal"> <!-- Para poder ponerlos lado a lado con CSS después-->
+       <div class="contenedor-tarjetas">
+            <!-- tarjeta 1 -->
+            <div class="tarjeta">
+                <div class="frente">
+                    <p>¿Qué es una señal?</p>
+                </div>
+                <div class="atras">
+                    <p>Una señal es información representada como una función del tiempo.</p>
+                </div>
+            </div>
+            <!-- tarjeta 2 -->
+             <div class="tarjeta">
+                <div class="frente">
+                    <p>¿Qué es un sistema?</p>
+                </div>
+                <div class="atras">
+                    <p>Una máquina matemática que recibe una señal y produce otra.</p>
+                </div>
+            </div>
+            <!-- tarjeta 3 -->
+            <div class="tarjeta">
+                <div class="frente">
+                    <p>¿Qué revela la Transformada de Fourier?</p>
+                </div>
+                <div class="atras">
+                    <p>Las frecuencias ocultas dentro de una señal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body> 
+</html>

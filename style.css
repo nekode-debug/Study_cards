@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* más pequeño en tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px; /* más pequeño en celulares */
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('cuadrogones.png');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+}
+
+header {
+    background-color: #FFFF00;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #FF4500;
+    font-size: 4rem;
+}
+
+.contenedor-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 20px; 
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.patito {
+    width: 460px;
+    cursor: pointer; /* para que se note que se puede hacer hover */
+}
+
+.boton {
+    background-color: #B2EBF2;
+    color: #FF6B35;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 30px 100px;
+    border-radius: 50px;
+    text-decoration: none; /*le quita el subrayado a los enlaces*/
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.boton:hover {
+    background-color: #FF69B4;
+    color: #B2EBF2;
+}
+
+.flecha {
+    position: absolute;
+    left: 30px;
+    bottom: 5px;
+    width: 100px; /* ajusta el tamaño */
+}
+
+.flecha:hover {
+    transform: scale(1.2);
+}
+
+/* Efecto volteado para las tarjetas */
+
+.contenedor-tarjetas {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-top: 5px;
+}
+
+.tarjeta {
+    width: 350px;
+    height: 250px;
+    perspective: 1000px; /*Le dice al navegador "simula que el ojo del usuario está a 1000px de distancia*/
+    cursor: pointer;
+    position: relative;
+}
+
+.frente, .atras {
+    width: 100%;
+    height: 100%;
+    position: absolute; /*Como las dos caras ocupan el mismo espacio, necesitan estar apiladas una encima de la otra*/
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    backface-visibility: hidden; /*Le dices "cuando estés de espaldas, hazte invisible". Así el frente desaparece cuando gira y solo ves el atrás*/
+    transition: transform 0.6s ease; /*Hace que la rotación sea suave en 0.6 segundos*/
+}
+
+.frente {
+    background-color: #FF85C2;
+    color: #B2EBF2;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+.atras {
+    background-color: #B2EBF2;
+    color: #FF85C2;
+    font-family: 'Baloo 2', cursive;
+    transform: rotateY(180deg);
+    font-size: 1.2rem;
+}
+
+.tarjeta:hover .frente {
+    transform: rotateY(-180deg); /*El atrás empieza ya girado 180 grados — o sea de espaldas, invisible. Cuando haces hover lo regresas a 0 y aparece.*/
+}
+
+.tarjeta:hover .atras {
+    transform: rotateY(0deg);
+}
+
+.contenedor-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.titulo {
+    font-family: 'Dancing Script', cursive;
+    color: #FF4500;
+    font-size: 3rem;
+    background-color: #B2EBF2;
+    padding: 10px 30px; /* Agrega algo de relleno para que el fondo se vea mejor */
+    border-radius: 50px;
+}
+
+/*estilo imagenes de patitos en el título de electromagnetismo*/
+.patito-tema {
+    width: 120px;
+    position: relative;
+    cursor: pointer; /* para que se note que se puede hacer hover */
+}
+
+.patito-tema:hover {
+    transform: scale(1.2);
+}
+
+.patito:hover {
+    transform: scale(1.1);
+    
+}
